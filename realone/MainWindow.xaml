@@ -1,0 +1,46 @@
+﻿<Window x:Class="realone.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:realone"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Background="#2e8b57">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="go_back_btn" Grid.Row="0" Grid.Column="0" Background="{x:Null}" BorderBrush="Transparent" Height="60" Click="go_back_btn_Click">
+            <Image Source="assets\obraz3.png" Stretch="Fill"/>
+        </Button>
+
+        <Button x:Name="go_forward_btn" Grid.Row="0" Grid.Column="5" Background="{x:Null}" BorderBrush="Transparent" Height="60" Click="go_forward_btn_Click">
+            <Image Source="assets\obraz2.png" Stretch="Fill"/>
+        </Button>
+
+        <Image Margin="20" Grid.Row="0" Grid.Column="1" Source="assets\obraz.png" />
+        <StackPanel Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2">
+            <Label Foreground="White" x:Name="artist_label">Artist</Label>
+            <Label x:Name="album_label">Album</Label>
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="songs_amount_label">0 utworoów</Label>
+                <Label x:Name="year_label">Year</Label>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label x:Name="downloads_label" Margin="20" Height="30">Downloads</Label>
+            <Button x:Name="dowload_button" Width="100" Height="30" Click="dowload_button_Click">Pobierz</Button>
+        </StackPanel>
+    </Grid>
+</Window>
